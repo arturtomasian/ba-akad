@@ -1,0 +1,52 @@
+body{
+    background-color: tomato;
+}
+.ba-menu{
+    font-size: 24px;
+    display: flex;
+
+    &__item{
+        color: violet;
+    }
+    &__link{
+        border-bottom: yellow;
+        &--active{
+            color: red;
+        }
+        div{
+
+            border: 2px solid black;
+        }
+    }
+}
+$font-size-h1:3rem;
+$font-size-h2: $font-size-h1*0.875;
+h1{
+    font-size: $font-size-h1;
+}
+h2{
+    font-size: $font-size-h2; 
+}
+$columns: 12;
+$container: 1170px;
+$gap: 15px;
+$col: $columns;
+
+@mixin col-width($col,$columns) {
+    width: 100% / $columns * $col;
+    padding: 0 $gap;
+}
+@mixin cols-create() {
+   $col: $columns;
+    @while $col > 0{
+        .ba-col-#{$col} {
+            @include col-width($col,$columns);
+        }
+        $col: $col - 1;
+    }
+    
+}
+@include cols-create();
+[class ^="ba-col"]{
+    padding: 0 $gap;
+}
