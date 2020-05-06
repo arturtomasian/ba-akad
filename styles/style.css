@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ba-hero {
-    min-height: 500px;
+    min-height: 100vh;
     background-color: #cfcfd0;
     background-image: url(../images/hero.jpg);
     background-size: cover;
@@ -149,7 +149,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .ba-section {
     margin-bottom: 150px;
-    border: 1px solid black;
 }
 
 .ba-section-header {
@@ -397,5 +396,8 @@ h1, h2, h3, h4, h5, h6 {
     }
     .ba-menu__link {
         font-size: 1em;
+    }
+    .ba-hero {
+        min-height: 500px;
     }
 }
